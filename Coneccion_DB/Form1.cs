@@ -30,8 +30,40 @@ namespace Coneccion_DB
         {
             try
             {
-                conectandose.Tranferir(textBox1.Text, textBox2.Text, Convert.ToInt32(textBox3.Text));
+                conectandose.Tranferir(textBox1.Text, textBox2.Text, Convert.ToDecimal(textBox3.Text));
                 dataGridView1.DataSource = conectandose.Consultar();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Debe ingresar los datos correctamente.");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Convert.ToInt32(textBox7.Text)==1)
+                {
+                    dataGridView2.DataSource = conectandose.Ingresar_Modificar_Eliminar_Cuenta(Convert.ToInt32(textBox7.Text), textBox4.Text, textBox5.Text, Convert.ToDecimal(textBox6.Text));
+                    dataGridView1.DataSource = conectandose.Consultar();
+                }
+                else if (Convert.ToInt32(textBox7.Text) == 2 && textBox5.Text != "")
+                {
+                    dataGridView2.DataSource = conectandose.Ingresar_Modificar_Eliminar_Cuenta(Convert.ToInt32(textBox7.Text), textBox4.Text, textBox5.Text, Convert.ToDecimal(textBox6.Text));
+                    dataGridView1.DataSource = conectandose.Consultar();
+                }
+                else if (Convert.ToInt32(textBox7.Text) == 3)
+                {
+                    dataGridView2.DataSource = conectandose.Ingresar_Modificar_Eliminar_Cuenta(Convert.ToInt32(textBox7.Text), textBox4.Text, "", 0);
+                    dataGridView1.DataSource = conectandose.Consultar();
+                }
+                else
+                {
+                    MessageBox.Show("Debe ingresar los datos correctamente.");
+                    dataGridView2.DataSource = "";
+                }
+                
             }
             catch (Exception)
             {

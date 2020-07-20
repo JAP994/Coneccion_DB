@@ -12,7 +12,7 @@ namespace Coneccion_DB
     class ConexionPgsql
     {
         NpgsqlConnection conn = new NpgsqlConnection("Server = localhost; User Id = postgres; Password = suco1994; Database = postgres;");
-
+       
         public DataTable Consultar()
         {
             string query = "SELECT * FROM cuentas";
@@ -23,7 +23,18 @@ namespace Coneccion_DB
             return tabla;
         }
 
-        public void Tranferir(string textBox1, string textBox2, int textBox3)
+        public DataTable Ingresar_Modificar_Eliminar_Cuenta(int p_opcion, string p_nro_cuenta, string p_cedula, decimal p_saldo)
+        {
+            string query1 = $"SELECT * FROM sp_cuenta_guardar_eliminar_modificar({p_opcion},'{p_nro_cuenta}','{p_cedula}',{ p_saldo});";
+            NpgsqlCommand ejecutor1 = new NpgsqlCommand(query1, conn);
+            NpgsqlDataAdapter datos1 = new NpgsqlDataAdapter(ejecutor1);
+            DataTable tabla1 = new DataTable();
+            datos1.Fill(tabla1);
+            return tabla1;
+            
+        }
+
+        public void Tranferir(string textBox1, string textBox2, decimal textBox3)
         {
             try
             {
@@ -41,6 +52,7 @@ namespace Coneccion_DB
                 NpgsqlCommand ejecutor3 = new NpgsqlCommand(query3, conn);
                 var f=ejecutor3.ExecuteNonQuery();
                 //MessageBox.Show(f + "");
+
                 if (f == 1 && e == 1)
                 {
                     //MessageBox.Show(e + "e" + f + "f");
@@ -64,7 +76,6 @@ namespace Coneccion_DB
             {
                 conn.Close();
                 MessageBox.Show("La transacción no pudo ser realizada.");
-                throw;
             }
            
         }
