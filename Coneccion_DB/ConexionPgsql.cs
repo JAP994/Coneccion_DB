@@ -23,6 +23,8 @@ namespace Coneccion_DB
             return tabla;
         }
 
+
+
         public DataTable Ingresar_Modificar_Eliminar_Cuenta(int p_opcion, string p_nro_cuenta, string p_cedula, decimal p_saldo)
         {
             string query1 = $"SELECT * FROM sp_cuenta_guardar_eliminar_modificar({p_opcion},'{p_nro_cuenta}','{p_cedula}',{ p_saldo});";
@@ -33,6 +35,9 @@ namespace Coneccion_DB
             return tabla1;
             
         }
+
+
+
 
         public void Tranferir(string textBox1, string textBox2, decimal textBox3)
         {
