@@ -23,11 +23,10 @@ namespace Coneccion_DB
         {
             try
             {
-                conectandose.Tranferir(textBox1.Text, textBox2.Text, Convert.ToDecimal(textBox3.Text), Convert.ToInt32(textBox4.Text), textBox5.Text);
+                conectandose.Tranferir(textBox1.Text, textBox2.Text, Convert.ToDecimal(textBox3.Text), textBox5.Text);
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
-                textBox4.Text = "";
                 textBox5.Text = "";
             }
             catch (Exception)

@@ -38,8 +38,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -101,7 +99,7 @@
             // button1
             // 
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(75, 323);
+            this.button1.Location = new System.Drawing.Point(154, 276);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(232, 35);
             this.button1.TabIndex = 10;
@@ -109,30 +107,11 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(188, 185);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(54, 27);
-            this.textBox4.TabIndex = 11;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(45, 147);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 65);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "INGRESE UNA OPCIÓN:\r\n     Tipo de transacción:\r\n\r\n                   DÉBITO     [" +
-    "1]  \r\n                  CRÉDITO   [2]  ";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(45, 248);
+            this.label5.Location = new System.Drawing.Point(45, 158);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 39);
             this.label5.TabIndex = 13;
@@ -140,7 +119,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(135, 248);
+            this.textBox5.Location = new System.Drawing.Point(154, 158);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(193, 60);
@@ -150,7 +129,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(179)))), ((int)(((byte)(218)))));
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(372, 158);
+            this.panel1.Location = new System.Drawing.Point(377, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(197, 200);
             this.panel1.TabIndex = 15;
@@ -173,8 +152,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -202,8 +179,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Panel panel1;
