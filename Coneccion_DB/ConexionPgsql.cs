@@ -39,7 +39,7 @@ namespace Coneccion_DB
 
 
 
-        public void Tranferir(string textBox1, string textBox2, decimal textBox3)
+        public void Tranferir(string textBox1, string textBox2, decimal textBox3, int textBox4, string textBox5)
         {
             try
             {
@@ -64,6 +64,14 @@ namespace Coneccion_DB
                     string query4 = "COMMIT";
                     NpgsqlCommand ejecutor4 = new NpgsqlCommand(query4, conn);
                     ejecutor4.ExecuteNonQuery();
+                    string query5 = $"INSERT INTO transacciones(fecha, monto, tipo_transaccion, nro_cuenta, descripcion) VALUES(current_timestamp, { textBox3 }, { textBox4 } , '{ textBox1 }', 'Se le debita por: { textBox5 }');";
+                    NpgsqlCommand ejecutor5 = new NpgsqlCommand(query5, conn);
+                    ejecutor5.ExecuteNonQuery();
+                    MessageBox.Show(textBox1);
+                    string query6 = $"INSERT INTO transacciones(fecha, monto, tipo_transaccion, nro_cuenta, descripcion) VALUES(current_timestamp, { textBox3 }, { textBox4 } , '{ textBox2 }', 'Se le acredita por: { textBox5 }'); ";
+                    NpgsqlCommand ejecutor6 = new NpgsqlCommand(query6, conn);
+                    ejecutor6.ExecuteNonQuery();
+                    MessageBox.Show(textBox2);
                     conn.Close();
                     MessageBox.Show("Transacción realizada con éxito.");
                 }
@@ -84,5 +92,15 @@ namespace Coneccion_DB
             }
            
         }
+        public DataTable verTransacciones(string p_nro_cuenta)
+        {
+            string query1 = $"SELECT nro_cuenta,monto,fecha, descripcion, nombre FROM transacciones,tipo_transaccion WHERE nro_cuenta='{ p_nro_cuenta }'AND tipo_transaccion.id=transacciones.tipo_transaccion;";
+            NpgsqlCommand ejecutor1 = new NpgsqlCommand(query1, conn);
+            NpgsqlDataAdapter datos1 = new NpgsqlDataAdapter(ejecutor1);
+            DataTable tabla1 = new DataTable();
+            datos1.Fill(tabla1);
+            return tabla1;
+        }
+
     }
 }
