@@ -40,6 +40,8 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -92,7 +94,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(29, 179);
+            this.textBox6.Location = new System.Drawing.Point(29, 211);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(145, 20);
             this.textBox6.TabIndex = 29;
@@ -101,7 +103,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(26, 153);
+            this.label6.Location = new System.Drawing.Point(26, 195);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(135, 13);
             this.label6.TabIndex = 28;
@@ -120,9 +122,9 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(30, 98);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 13);
+            this.label5.Size = new System.Drawing.Size(136, 13);
             this.label5.TabIndex = 26;
-            this.label5.Text = "Ingrese nombre de la cuenta::";
+            this.label5.Text = "Ingrese cédula Propietario::";
             // 
             // textBox4
             // 
@@ -151,12 +153,31 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(29, 167);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(145, 20);
+            this.textBox1.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(26, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 13);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Ingrese nombre Propietario:";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(72)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(600, 433);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label7);
@@ -193,5 +214,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

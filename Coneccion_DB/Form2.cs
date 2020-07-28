@@ -16,7 +16,7 @@ namespace Coneccion_DB
         {
             InitializeComponent();
         }
-
+        ConexionPgsql conectandose = new ConexionPgsql();
         private void btnCuenta_Click(object sender, EventArgs e)
         {
             openChildForm(new Form4());
@@ -44,6 +44,11 @@ namespace Coneccion_DB
                 panelCuentaHijo.Tag = childForm;
                 childForm.BringToFront();
                 childForm.Show();
-        } 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            conectandose.CargarDB();
+        }
     }
 }

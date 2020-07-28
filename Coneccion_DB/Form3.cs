@@ -1,13 +1,16 @@
-﻿using System;
+﻿using jsreport.Binary;
+using jsreport.Local;
+using jsreport.Types;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Coneccion_DB
 {
     public partial class Form3 : Form
@@ -20,6 +23,11 @@ namespace Coneccion_DB
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = conectandose.verTransacciones(textBox1.Text);
+        }
+
+        private void Imprimir_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
