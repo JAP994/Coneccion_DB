@@ -1,10 +1,8 @@
-﻿using jsreport.Binary;
-using jsreport.Local;
-using jsreport.Types;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -27,7 +25,9 @@ namespace Coneccion_DB
 
         private void Imprimir_Click(object sender, EventArgs e)
         {
-            
+            Process proceso = new Process();
+            proceso.StartInfo.FileName = @"C:\Users\sawme\Downloads\reportecuenta1111.pdf";
+            proceso.Start();
         }
     }
 }
